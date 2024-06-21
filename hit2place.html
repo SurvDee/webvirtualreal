@@ -71,8 +71,12 @@ loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/re
 })
 
 let flower;
-loader.load("webar/Emery Aventus PS1.gltf", function(gltf) {
+loader.load("emery-aventus/source/sketch/Emery Aventus PS1.gltf", function(gltf) {
+
+  
   flower = gltf.scene;
+  // Resize the flower object
+  flower.scale.set(0.5, 0.5, 0.5);
 });
 
 session.addEventListener("select", (event) => {
